@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kafana "Casablanca"</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Meni - Kafana "Casablanca"</title>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #fff5e1;
       font-family: 'Lora', serif;
+      background-color: #fff5e1;
       margin: 0;
       padding: 0;
       text-align: center;
@@ -24,26 +23,20 @@
 
     header h1 {
       font-family: 'Lobster', cursive;
-      font-size: 3.5em;
+      font-size: 3em;
       margin: 0;
-      color: #fff;
       text-shadow: 2px 2px #c38f78;
     }
 
-    header p {
-      margin-top: 5px;
-      font-style: italic;
-      color: #ffddd2;
-    }
-
     nav {
-      margin-top: 15px;
+      margin-top: 0;
       background-color: #a00000;
       display: flex;
       justify-content: center;
       gap: 25px;
-      padding: 10px 0;
-      border-radius: 0 0 15px 15px;
+      padding: 12px 0;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
@@ -53,8 +46,8 @@
       font-weight: bold;
       padding: 10px 20px;
       border-radius: 8px;
-      transition: 0.3s;
       background-color: #b30000;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -63,84 +56,174 @@
       transform: scale(1.05);
     }
 
-    main {
-      margin: 30px auto;
+    /* Slider */
+    .slider {
+      position: relative;
+      width: 90%;
       max-width: 800px;
-      background-color: #fff8f0;
-      padding: 25px;
+      height: 400px;
+      margin: 30px auto;
+      overflow: hidden;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
-    .main-image {
-      width: 90%;
-      max-width: 600px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slide 16s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0%, 20% { transform: translateX(0%); }
+      25%, 45% { transform: translateX(-100%); }
+      50%, 70% { transform: translateX(-200%); }
+      75%, 95% { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+
+    /* Sekcije menija */
+    .meni-kategorija {
+      margin: 30px auto;
+      max-width: 900px;
+    }
+
+    .meni-kategorija h2 {
+      color: #7b0000;
+      border-bottom: 2px solid #7b0000;
+      display: inline-block;
+      padding-bottom: 5px;
+      font-family: 'Lora', serif;
       margin-bottom: 20px;
     }
 
-    .info {
-      font-size: 1.1em;
-      line-height: 1.6;
+    .kartice {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .info b {
-      color: #7b0000;
-    }
-
-    h2 {
-      color: #7b0000;
-      font-family: 'Lora', serif;
-      margin-top: 40px;
-    }
-
-    iframe {
-      width: 90%;
-      height: 350px;
+    .kartica {
+      background: #fff8f0;
+      border: 1px solid #ddd;
       border-radius: 10px;
-      border: none;
-      margin-top: 10px;
+      padding: 15px;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .kartica:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .kartica h3 {
+      margin: 0 0 10px 0;
+      color: #7b0000;
+    }
+
+    .kartica p {
+      margin: 0;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    a.back {
+      display: inline-block;
+      margin: 30px auto;
+      color: #7b0000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    a.back:hover {
+      color: #ff6347;
     }
 
     footer {
       background-color: #7b0000;
-      color: #fff;
+      color: white;
       padding: 15px;
       margin-top: 40px;
       font-size: 0.9em;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1>Kafana "Casablanca"</h1>
-    <p>Mjesto dobre kahve i još boljeg razgovora</p>
+    <h1>Meni kafane "Casablanca"</h1>
   </header>
 
   <nav>
-    <a href="historijat.html">O nama</a>
-    <a href="meni.html">Meni</a>
+    <a href="index.html">Početna</a>
+    <a href="historijat.html">Historijat</a>
     <a href="rezervacije.html">Rezervacije</a>
   </nav>
 
   <main>
-    <img src="kafana.jpg" alt="Kafana Casablanca enterijer" class="main-image">
-
-    <div class="info">
-      <p><b>Adresa:</b> Ulica Maršala Tita 15, Sarajevo</p>
-      <p><b>Radno vrijeme:</b> Ponedjeljak – Nedjelja, 09:00 – 23:00</p>
+    <div class="slider">
+      <div class="slides">
+        <img src="meni1.jpg" alt="Tradicionalna jela">
+        <img src="meni2.jpg" alt="Enterijer kafane">
+        <img src="meni3.jpg" alt="Specijalitet kuće">
+        <img src="meni4.jpg" alt="Pića i društvo">
+      </div>
     </div>
 
-    <h2>Naša lokacija</h2>
-    <iframe 
-      src="https://www.openstreetmap.org/export/embed.html?bbox=18.412%2C43.856%2C18.418%2C43.858&amp;layer=mapnik&amp;marker=43.857%2C18.415"
-      loading="lazy"></iframe>
+    <!-- Topli napici -->
+    <div class="meni-kategorija">
+      <h2>Topli napici</h2>
+      <div class="kartice">
+        <div class="kartica"><h3>Kafa kratka</h3><p>2 KM</p></div>
+        <div class="kartica"><h3>Kafa duga</h3><p>2.5 KM</p></div>
+        <div class="kartica"><h3>Čaj</h3><p>1.5 KM</p></div>
+      </div>
+    </div>
+
+    <!-- Hladni napici -->
+    <div class="meni-kategorija">
+      <h2>Hladni napici</h2>
+      <div class="kartice">
+        <div class="kartica"><h3>Sok narandža</h3><p>2 KM</p></div>
+        <div class="kartica"><h3>Sok jabuka</h3><p>2 KM</p></div>
+        <div class="kartica"><h3>Voda</h3><p>1 KM</p></div>
+      </div>
+    </div>
+
+    <!-- Rakije -->
+    <div class="meni-kategorija">
+      <h2>"Ljuti" sokovi</h2>
+      <div class="kartice">
+        <div class="kartica"><h3>Domaća šljiva</h3><p>3 KM</p></div>
+        <div class="kartica"><h3>Domaća kajsija</h3><p>3 KM</p></div>
+        <div class="kartica"><h3>Domaći liker od višnje</h3><p>4 KM</p></div>
+      </div>
+    </div>
+
+    <!-- Meze -->
+    <div class="meni-kategorija">
+      <h2>Meze</h2>
+      <div class="kartice">
+        <div class="kartica"><h3>Kifla sa sirom</h3><p>1.5 KM</p></div>
+        <div class="kartica"><h3>Pljeskavica</h3><p>3 KM</p></div>
+        <div class="kartica"><h3>Pečeni krompir</h3><p>2 KM</p></div>
+      </div>
+    </div>
+
+    <a href="index.html" class="back">⟵ Nazad na početnu</a>
   </main>
 
   <footer>
-    © 2025 Kafana "Casablanca" | Sarajevo - Eman Kurtalić IVf
+    © 2025 Kafana "Casablanca" | Sarajevo
   </footer>
 </body>
 </html>
