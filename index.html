@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-    <meta charset="UTF-8">
-    <title>Kafana Casablanca</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kafana "Casablanca"</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <header>
     <h1>Kafana "Casablanca"</h1>
+    <p class="subtitle">Kafana "Casablanca" – mjesto dobre kahve</p>
+  </header>
 
-    <!-- Rotirajući slider -->
-    <div class="slider">
-        <p>Bujrum!</p>
-        <p>Radno vrijeme: Ponedjeljak – Nedjelja, 09:00 – 23:00</p>
-        <p>Adresa: Ulica Maršala Tita 15, Sarajevo</p>
-        <p>Kafana "Casablanca" – mjesto dobre kahve</p>
+  <nav>
+    <a href="historijat.html">O nama</a>
+    <a href="meni.html">Meni</a>
+    <a href="rezervacije.html">Rezervacije</a>
+  </nav>
+
+  <main class="container">
+    <img src="kafana.jpg" alt="Kafana Casablanca" class="main-image">
+
+    <p><strong>Adresa:</strong> Ulica Maršala Tita 15, Sarajevo</p>
+    <p><strong>Radno vrijeme:</strong> Ponedjeljak – Nedjelja, 09:00 – 23:00</p>
+
+    <h2>Naša lokacija</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.056059446796!2d18.41307651552493!3d43.85625847911408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c8cb4c3a2e11%3A0x2e3d0ecde14a2f6a!2sMar%C5%A1ala%20Tita%2015%2C%20Sarajevo!5e0!3m2!1sbs!2sba!4v1696433171677!5m2!1sbs!2sba" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
     </div>
+  </main>
 
-    <nav>
-        <a href="historijat.html">O nama</a>
-        <a href="meni.html">Meni</a>
-        <a href="rezervacije.html">Rezervacije</a>
-    </nav>
+  <footer>
+    <p>© 2025 Kafana "Casablanca" | Sarajevo</p>
+  </footer>
 
-    <section>
-        <img src="kafana.jpg" alt="Slika kafane Casablanca" width="400">
-        <p><strong>Adresa:</strong> Ulica Maršala Tita 15, Sarajevo</p>
-        <p><strong>Radno vrijeme:</strong> Ponedjeljak – Nedjelja, 09:00 – 23:00</p>
-    </section>
-
-    <!-- Google Maps embed -->
-    <section class="mapa">
-        <h2>Naša lokacija</h2>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.9353998041725!2d18.413076215735836!3d43.856258979115844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758cbb1056b1a7f%3A0x69a6e0caa8b4a6ff!2sSarajevo%20City%20Center!5e0!3m2!1sbs!2sba!4v1696429485673!5m2!1sbs!2sba"
-            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-    </section>
 </body>
 </html>
-
