@@ -3,146 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meni - Kafana "Casablanca"</title>
+  <title>Kafana "Casablanca"</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Naslov sa posebnim fontom */
-    h1 {
-      font-family: 'Lobster', cursive;
-      font-size: 3em;
-      color: #7b0000;
-      text-shadow: 2px 2px #e2b8a3;
-    }
-
-    /* Slider */
-    .slider {
-      position: relative;
-      width: 90%;
-      max-width: 800px;
-      height: 400px;
-      margin: 30px auto;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-
-    .slides {
-      display: flex;
-      width: 500%;
-      animation: slide 18s infinite;
-    }
-
-    .slides img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0%); }
-      20% { transform: translateX(0%); }
-      25% { transform: translateX(-100%); }
-      45% { transform: translateX(-100%); }
-      50% { transform: translateX(-200%); }
-      70% { transform: translateX(-200%); }
-      75% { transform: translateX(-300%); }
-      95% { transform: translateX(-300%); }
-      100% { transform: translateX(0%); }
-    }
-
-    /* Sekcija menija */
-    .menu-section {
+    body {
+      background-color: #fff5e1;
+      font-family: 'Lora', serif;
+      margin: 0;
+      padding: 0;
       text-align: center;
+    }
+
+    header {
+      background-color: #7b0000;
+      color: white;
+      padding: 25px 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 3.5em;
+      margin: 0;
+      color: #fff;
+      text-shadow: 2px 2px #c38f78;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-style: italic;
+      color: #ffddd2;
+    }
+
+    nav {
+      margin-top: 15px;
+      background-color: #a00000;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px 0;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+      background-color: #b30000;
+    }
+
+    nav a:hover {
+      background-color: #ffb3a1;
+      color: #5a0000;
+      transform: scale(1.05);
+    }
+
+    main {
+      margin: 30px auto;
+      max-width: 800px;
+      background-color: #fff8f0;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .main-image {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .info b {
+      color: #7b0000;
+    }
+
+    h2 {
+      color: #7b0000;
+      font-family: 'Lora', serif;
       margin-top: 40px;
     }
 
-    .menu-category {
-      margin: 30px auto;
-      background-color: #fff8f0;
-      width: 80%;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .menu-category h2 {
-      color: #7b0000;
-      border-bottom: 2px solid #a00000;
-      display: inline-block;
-      padding-bottom: 5px;
-      font-family: 'Lora', serif;
-    }
-
-    .menu-category ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1.1em;
-    }
-
-    .menu-category li {
-      padding: 8px 0;
+    iframe {
+      width: 90%;
+      height: 350px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 10px;
     }
 
     footer {
-      margin-top: 50px;
+      background-color: #7b0000;
+      color: #fff;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Meni kafane "Casablanca"</h1>
+    <h1>Kafana "Casablanca"</h1>
+    <p>Mjesto dobre kahve i još boljeg razgovora</p>
   </header>
 
   <nav>
-    <a href="index.html">Početna</a>
-    <a href="historijat.html">Historijat</a>
+    <a href="historijat.html">O nama</a>
+    <a href="meni.html">Meni</a>
     <a href="rezervacije.html">Rezervacije</a>
   </nav>
 
   <main>
-    <div class="slider">
-      <div class="slides">
-        <img src="meni1.jpg" alt="Tradicionalna jela">
-        <img src="meni2.jpg" alt="Kafana Casablanca enterijer">
-        <img src="meni3.jpg" alt="Specijalitet kuće">
-        <img src="meni4.jpg" alt="Pića i muzika">
-      </div>
+    <img src="kafana.jpg" alt="Kafana Casablanca enterijer" class="main-image">
+
+    <div class="info">
+      <p><b>Adresa:</b> Ulica Maršala Tita 15, Sarajevo</p>
+      <p><b>Radno vrijeme:</b> Ponedjeljak – Nedjelja, 09:00 – 23:00</p>
     </div>
 
-    <div class="menu-section">
-      <div class="menu-category">
-        <h2>Predjela</h2>
-        <ul>
-          <li>Sir i kajmak – 6 KM</li>
-          <li>Suho meso i sir – 8 KM</li>
-          <li>Topli hljeb i ajvar – 4 KM</li>
-        </ul>
-      </div>
-
-      <div class="menu-category">
-        <h2>Glavna jela</h2>
-        <ul>
-          <li>Ćevapi u somunu – 8 KM</li>
-          <li>Teleći ispod sača – 14 KM</li>
-          <li>Pileći file na žaru – 10 KM</li>
-        </ul>
-      </div>
-
-      <div class="menu-category">
-        <h2>Pića</h2>
-        <ul>
-          <li>Kahva – 2 KM</li>
-          <li>Rakija domaća – 3 KM</li>
-          <li>Pivo (0.5l) – 4 KM</li>
-        </ul>
-      </div>
-    </div>
+    <h2>Naša lokacija</h2>
+    <iframe 
+      src="https://www.openstreetmap.org/export/embed.html?bbox=18.412%2C43.856%2C18.418%2C43.858&amp;layer=mapnik&amp;marker=43.857%2C18.415"
+      loading="lazy"></iframe>
   </main>
 
   <footer>
-    <p>© 2025 Kafana "Casablanca" | Sarajevo</p>
+    © 2025 Kafana "Casablanca" | Sarajevo - Eman Kurtalić IVf
   </footer>
 </body>
 </html>
